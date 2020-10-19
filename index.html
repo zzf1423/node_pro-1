@@ -1,12 +1,149 @@
-<!DOCTYPE html>
-<html lang="zh">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
+<style>
+
+</style>
 <body>
-	宋波波老坏了！
+<div class="mobile-mu" id="mobile-mu">
+        	<ul>
+            	<li>魅族商城</li>
+                <li>魅族手机</li>
+                <li>魅蓝手机</li>
+                <li>配件</li>
+                <li>服务</li>
+                <li>专卖店</li>
+                <li>Flyme</li>
+                <li>社区</li>
+            </ul>
+        </div>
+<div class="header" id="header">
+	
+  <!--<div class="header-nav-ico"></div>-->
+	<div class="header-img" id="header-img">
+    <div class="oo">
+    	<ul>
+        	<li id="one"></li>
+            <li id="two"></li>
+        </ul>
+    </div>
+    <img src="image/banner.jpg" width="1439" height="760" id="imgsize" class="imgsize">
+    <div class="nav" id="nav">
+    	<div class="l"><img src="image/loogo.png" width="142" height="40"/></div>
+        <div class="r">
+        	<ul>
+            	<li>魅族商城</li>
+                <li>魅族手机</li>
+                <li>魅蓝手机</li>
+                <li>配件</li>
+                <li>服务</li>
+                <li>专卖店</li>
+                <li>Flyme</li>
+                <li>社区</li>
+                <li style="padding-top:5px;"><img src="image/ico.jpg" width="61" height="29" /></li>
+            </ul>
+        </div>
+        <div class="mu" id="mu" onclick="m()"><img src="image/mu.png" width="27" height="18" /></div>
+    </div> 
+    </div>
+</div>
+<div class="photo-nav">
+	<ul>
+    	<li><img src="image/photo1.jpg" width="623" height="301" class="photo-img" /></li>
+        <li><img src="image/photo2.png" width="623" height="301" class="photo-img"/></li>
+        <li><img src="image/photo3.png" width="623" height="301" class="photo-img"/></li>
+</ul>
+</div>
+<div class="bg">
+<div class="footcontent">
+	<div class="l">
+    	<ul>
+        	<li><h3>魅族商城</h3></li>
+            <li>PRO5</li>
+            <li>魅蓝2</li>
+            <li>贴膜</li>
+        </ul>
+        <ul class="cl">
+        	<li><h3>寄送快递</h3></li>
+            <li>上门快修</li>
+            <li>预约维修</li>
+            <li>VIP注册</li>
+        </ul>
+        <ul >
+        	<li><h3>云服务</h3></li>
+            <li>固件下载</li>
+            <li>软件商城</li>
+            <li>查找手机</li>
+        </ul>
+        <ul>
+        	<li><h3>关于魅族</h3></li>
+            <li>加入我们</li>
+            <li>联系我们</li>
+            <li>法律声明</li>
+        </ul>
+    </div>
+    <div class="r">
+    	<ul>
+        	<li>24小时全国服务热线</li>
+            <li>400-788-3333</li>
+            <li><img src="image/butt.png" width="166" height="41" /></li>
+        </ul>
+    </div>
+</div>
+</div>
+<div class="footer">
+	<div class="footer-ms">TEL:15201504091&nbsp;&nbsp;&nbsp; QQ:451529697&nbsp;&nbsp; 微信号:15201504091</div>
+</div>
+<div class="footer2">TEL:15201504091&nbsp;&nbsp;&nbsp; QQ:451529697&nbsp;&nbsp; 微信号:15201504091</div>
+<script>
+window.onload= window.onresize=function(){
+	var w=document.getElementById("imgsize").height;
+	/*document.getElementById("header").style.height=w+"px";
+	document.getElementById("header-img").style.height=w+"px";*/
+	document.getElementById("nav").style.top=-(w-10)+"px";
+}
+document.getElementById("mobile-mu").style.display='none';
+function m(){
+	var obj=document.getElementById("mobile-mu");
+	//alert(obj)
+	if(obj.style.display=="none"){
+		obj.style.display='block';
+	}else{
+		obj.style.display='none';
+	}
+}
+function an(){
+	
+	//var obj=document.getElementById("imgsize");
+	//alert(obj.src)
+	document.getElementById("one").style.backgroundColor="#CDCDCD"
+	if(document.getElementById("imgsize").src.match("banner")){
+		//alert(obj.src)
+		document.getElementById("imgsize").src="image/a.jpg";
+		document.getElementById("two").style.backgroundColor="#999"
+		document.getElementById("one").style.backgroundColor="#CDCDCD"
+	}else{
+		document.getElementById("imgsize").src="image/banner.jpg";
+		document.getElementById("two").style.backgroundColor="#CDCDCD"
+		document.getElementById("one").style.backgroundColor="#999"
+	}
+}
+document.getElementById("one").onclick=function(){
+		document.getElementById("one").style.backgroundColor="#999";
+		document.getElementById("two").style.backgroundColor="#cdcdcd";
+		document.getElementById("imgsize").src="image/banner.jpg";	
+}
+document.getElementById("two").onclick=function(){
+		document.getElementById("two").style.backgroundColor="#999";
+		document.getElementById("one").style.backgroundColor="#cdcdcd";
+		document.getElementById("imgsize").src="image/a.jpg";	
+}
+setInterval(an,3000)
+</script>
 </body>
 </html>

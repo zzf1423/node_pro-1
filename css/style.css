@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+body{margin:0px; padding:0px; background:#f5f5f5;}
+ul{ padding:0px; margin:0px;}
+.header{width:100%; background:#FFF; height:760px;}
+/* 先修改了图片的媒体查询，js改*/
+.header-img{ width:1440px; margin:auto; height:760px; position:relative;}
+/*先不动，js改*/
+.oo{position:absolute; bottom:40px; left:calc((100% - 80px) / 2); width:80px; height:20px; }
+.oo ul{list-style:none;}
+.oo ul li{display:block; width:10px; height:10px; border:1px #333333; border-radius:50%; background:#999; float:left; margin-right:20px; border:#333; cursor:pointer; transition:all 0.5s;} 
+.nav{ width:1240px; height:40px; position:relative; top:-730px; left:200px; line-height:40px;}
+/*隐藏 top:js得到，left：基本调整一下*/
+.nav .l{ width:142px; height:40px; float:left;}
+.nav .r{ width:840px; height:40px; float:right;}
+	/*完全隐藏，替换新的按钮*/
+.nav .r ul li{list-style:none; display:block; float:left; width:93px; text-align:center; font-size:14px; font-family:"黑体"; color:#333;}
+.mu{ width:27px; height:18px; float:right; margin-right:10px; display:none; margin-top:10px;}
+.photo-nav{ width:1870px; height:300px; margin:auto; position:relative; top:-20px;}
+.photo-nav ul{padding:0px; margin:0px; }
+.photo-nav ul li{display:block; width:623px; height:300px; float:left; margin:0px; padding:0px;}
+
+.bg{background:#FFF; width:100%; height:auto; position:relative;}
+.footcontent{width:1240px; height:160px;margin:auto; margin-top:40px; padding-top:20px; }
+.footcontent .l{ width:889px; height:160px; float:left;}
+.footcontent .r{ width:351px; height:160px; float:right; font-size:16px; font-family:"黑体";}
+.l ul{list-style:none; display:block; width:222px; float:left;}
+.l ul li{line-height:35px; color:#3C3C3C; font-size:14px; font-family:"黑体";}
+.l ul h3{padding:0px; margin:0px;}
+.r ul{list-style:none; line-height:35px; margin-top:20px;}
+.r ul li{text-align:right;}
+.footer{ width:100%; height:100px; background:#FFF; position:relative;}
+.footer-ms{ width:1240px; height:70px; margin:auto; border-top:1px solid #999; text-align:center; color:#666; font-size:12px; line-height:60px;}
+.footer2{display:none;text-align:center; margin-bottom:30px; color:#666; font-size:12px;}
+
+.mobile-mu{background:rgba(153,153,153,0.4); position:absolute; top:50px; width:150px; height:250px; right:10px; z-index:10000;}
+.mobile-mu ul{list-style:none;}
+.mobile-mu ul li{display:block; line-height:25px; color:rgba(51,51,51,1); font-size:12px; padding-left:8px; border-bottom:rgba(102,102,102,1) 1px dotted; }
+@media screen and (max-width: 1000px) {
+	.header-img{ width:100%; height:auto;}
+	.imgsize{ width:100%; height:auto;}
+	.header{ width:99.2%; height:auto;}
+	.nav .r{display:none;}
+	.nav{width:99%; left:10px;}
+	.mu{display:block; cursor:pointer;}	
+	
+	.photo-nav{ width:100%; height:auto;}
+	.photo-nav ul li{float:none; width:100%;  text-align:center; height:auto;}
+	.photo-img{width:98%; height:auto; margin:1%;}
+	
+	.footcontent{ width:100%; height:auto;margin-top:-13px;}
+	.footcontent .l{/*width:100%; height:auto; float:none; text-align:center;*/ display:none;}
+	.footcontent .r{width:100%; height:auto; text-align:center; }
+	.r ul{margin-top:0px; height:auto;}
+	.r ul li{text-align:center; height:auto;}
+	.bg{background:none; height:auto;}
+	.footer{ display:none;}
+	.footer2{display:block; width:100%; height:100px; }
+}
